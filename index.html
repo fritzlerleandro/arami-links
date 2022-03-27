@@ -13,12 +13,6 @@
       crossorigin="anonymous"
     />
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css"
-      crossorigin="anonymous"
-    />
-
     <style>
       /* Fake bold text */
       .bold {
@@ -106,11 +100,17 @@
             2.333px 0 0 currentColor, 2.666px 0 0 currentColor, 3px solid currentColor;
         }
       }
-
-      @import url("css/iconic/css/iconmonstr-iconic-font.min.css");
       @font-face {
         font-family: "italiana-regular";
         src: url("fonts/italiana/ITALIANA-REGULAR.TTF")
+            format("truetype");
+        font-style: normal;
+        font-weight: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "ibm-plex-sans-regular";
+        src: url("fonts/ibm-plex-sans/IBMPLEXSANS-REGULAR.TTF")
             format("truetype");
         font-style: normal;
         font-weight: normal;
@@ -146,32 +146,39 @@
         padding-top: 50px;
       }
       .btn {
-        display: block;
-        border: solid 2px white;
-        background-color: transparent;
-        border-radius: 5rem;
+        border-radius: 10px;
         width: 100%;
-        padding: 10px;
-        color: white;
         margin-bottom: 20px;
-        font-family: "montserrat-regular";
-        letter-spacing: 0.02rem;
         white-space: normal;
         word-wrap: break-word;
+        background-color: #f1f1f1;
+        color: #687351;
+        fill: #687351;
+        letter-spacing: 4px;
+        padding: 17px 15px;
+        text-decoration: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-family: "ibm-plex-sans-regular", sans-serif;
+        border: 1px solid #fafafa;
+      }
+      btn:focus {
+        outline: dotted;
       }
       .btn:hover {
         background-color: #fafafa;
+        border: .5px solid #687351;
         color: #687351;
-        font-weight: bolder;
       }
       body {
-        background-color: #abb1a8;
+        background-color: #fafafa;
       }
       hr {
         margin-top: 3rem;
         margin-bottom: 1rem;
         border: 0;
         border-top: 1px solid rgba(255, 255, 255, 1);
+        border-top: 1px solid #687351;
         box-sizing: content-box;
         height: 0;
         overflow: visible;
@@ -180,7 +187,7 @@
         color: #687351;
         font-family: "italiana-regular", sans-serif;
         font-size: 2rem;
-        margin: 16px 0 50px 0;
+        margin: 16px 0 10px 0;
       }
       h5 {
         color: #fafafa;
@@ -195,12 +202,13 @@
       .destacado {
         background: #687351 !important;
         color: #fafafa;
-        border-color:  #555d42;
+        border: 1.5px solid #555d42;
       }
       .destacado:hover {
         background: #fafafa !important;
-        color: #333;
-        border-color: #fafafa;
+        color: #687351;
+        border: 1.5px solid #687351;
+        font-weight: bolder;
       }
       .footer-social {
         margin-block-start: 0;
@@ -220,10 +228,22 @@
         clear: both;
       }
       .footer-social li a {
-        color: #fafafa;
+        color: #687351;
+        padding: 0.5rem;
       }
-      .im {
-        font-size: 18px;
+      .icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        background-size: cover;
+        filter: invert(47%) sepia(30%) saturate(345%) hue-rotate(38deg) brightness(85%) contrast(90%)
+      }
+      .icon:hover,
+      .icon:focus {
+        filter: invert(34%) sepia(11%) saturate(1167%) hue-rotate(37deg) brightness(89%) contrast(80%);
+      }
+      p {
+        font-family: "ibm-plex-sans-regular", sans-serif;
+        color: #687351;
       }
     </style>
   </head>
@@ -232,55 +252,56 @@
       <div class="row top50">
         <div class="col-md-2"></div>
         <div class="col-md-8 centrado">
-          <img src="images/logo-arami.png" alt="" class="imgs" />
+          <img src="images/logo-arami.png" alt="Logo de Aramí Home" class="imgs" />
           <h1 class="bold">Aramí Home</h1>
+          <p class="mb-5 p">¿Cómo podemos ayudarte?</p>
           <a
             rel="noopener noreferrer"
             href="https://leandrofritzler.com.ar/#works"
             class="btn"
-            >Contactanos por Whatsapp</a
+            >Tienda online</a
           >
           <a
             rel="noopener noreferrer"
             href="https://aramihome.com.ar"
             class="btn"
-            >Tienda Online</a
+            >Política de cambios</a
           >
           <a
             rel="noopener noreferrer"
             href="https://leandrofritzler.com.ar/es#contact"
             class="btn"
-            >Mantas Nido 100% Algodón Premium</a
+            >Preguntas frecuentes</a
           >
           <a
             rel="noopener noreferrer"
             href="https://calendly.com/leandrofritzler/free-consulting"
             class="btn destacado mt-5"
-            >BTN DESTACADO 1</a
+            >Nueva temporada</a
           >
           <a
             rel="noopener noreferrer"
             href="https://calendly.com/leandrofritzler/free-consulting"
             class="btn destacado mt-3"
-            >BTN DESTACADO 2</a
+            >Promoción Uno</a
           >
 
           <hr />
 
           <ul class="footer-social d-flex flex-row justify-content-center">
             <li>
-              <a href="maito:contacto@aramihome.com.ar">
-                <i class="im im-mail" aria-hidden="true"></i>
+              <a href="https://instagram.com/leandro.fritzler">
+                <img type="image/svg+xml" alt="Whatsapp de Aramí Home" src="/svgs/whatsapp.svg" class="icon icon-whatsapp">
               </a>
             </li>
-            <li>
-              <a href="https://wa.link/km2q40">
-                <i class="im im-whatsapp" aria-hidden="true"></i>
+             <li>
+              <a href="https://instagram.com/leandro.fritzler">
+                <img type="image/svg+xml" alt="Email de Aramí Home" src="/svgs/email.svg" class="icon icon-email">
               </a>
             </li>
             <li>
               <a href="https://instagram.com/leandro.fritzler">
-                <i class="im im-instagram" aria-hidden="true"></i>
+                <img type="image/svg+xml" alt="Instagram de Aramí Home" src="/svgs/ig.svg" class="icon icon-ig">
               </a>
             </li>
           </ul>
