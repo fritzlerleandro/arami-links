@@ -179,6 +179,21 @@
       body {
         background-color: #fafafa;
       }
+      body:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        min-width: 100vw;
+        min-height: 100vh;
+        opacity: 0.15;
+        background-image: url('/images/bg.jpg');
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: cover;
+      }
+
       hr {
         margin-top: 3rem;
         margin-bottom: 1rem;
@@ -219,9 +234,7 @@
         margin-block-start: 0;
         padding-inline-start: 0;
         list-style: none;
-        margin-top: 1rem;
-        margin-bottom: 25px;
-        margin-left: 0;
+        margin: 2rem auto 1rem;
         font-family: "montserrat-regular", sans-serif;
         font-size: 1rem;
         text-transform: uppercase;
