@@ -176,22 +176,28 @@
         border: .5px solid #687351;
         color: #687351;
       }
+      .bg-img {
+        position: fixed;
+        inset: 0px;
+        z-index: -1;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("/images/bg2.png");
+        width: 100vw;
+        height: auto;
+        animation: shrink 10s infinite alternate;
+      }
+      @keyframes shrink {
+        0% {
+          background-size: 110% 110%;
+        }
+        100% {
+          background-size: 100% 100%;
+        }
+      }
       body {
         background-color: #fafafa;
-      }
-      body:before {
-        content: ' ';
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 0;
-        min-width: 100vw;
-        min-height: 100vh;
-        opacity: 0.15;
-        background-image: url('/images/bg.jpg');
-        background-repeat: no-repeat;
-        background-position: 50% 0;
-        background-size: cover;
       }
 
       hr {
@@ -202,6 +208,7 @@
         box-sizing: content-box;
         height: 0;
         overflow: visible;
+        opacity: 0.5;
       }
       h1 {
         color: #687351;
@@ -267,9 +274,9 @@
   </head>
   <body>
     <div class="container">
-      <div class="row top50">
-        <div class="col-md-2"></div>
-        <div class="col-md-8 mb-5 centrado">
+      <div class="row top50 justify-content-center">
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-6 mb-5 centrado">
+          <div class="bg-img"></div>
           <img src="images/logo-arami.png" alt="Logo de Aramí Home" class="imgs" />
           <h1 class="bold">Aramí Home</h1>
           <p class="mb-5 p">¿Cómo podemos ayudarte?</p>
@@ -278,6 +285,12 @@
             href="https://leandrofritzler.com.ar/#works"
             class="btn"
             >Tienda online</a
+          >
+          <a
+            rel="noopener noreferrer"
+            href="https://leandrofritzler.com.ar/#works"
+            class="btn"
+            >Tienda online 2</a
           >
           <a
             rel="noopener noreferrer"
